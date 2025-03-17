@@ -1,0 +1,180 @@
+[gd_scene load_steps=9 format=3 uid="uid://d1yeklw2bljpa"]
+
+[ext_resource type="Material" uid="uid://dl8bthdom5g7u" path="res://demo/Materials/Mat_UntexturedSurface.tres" id="1_8ivfl"]
+[ext_resource type="Script" path="res://demo/Scripts/LookAtTarget.cs" id="1_68pgd"]
+
+[sub_resource type="Animation" id="Animation_1et7n"]
+resource_name = "DaylightCycle"
+length = 24.0
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sun/Harness:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 24),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.253073, 1.41372, 3.14159), Vector3(-0.253073, 1.41372, -3.14159)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sun/Harness/DirectionalLight:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5, 6.375, 8, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0.533333, 0.2, 1), Color(1, 0.8725, 0.55, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sun/Harness/DirectionalLight:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4.5, 5, 7, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.3, 0.3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WorldEnvironment:environment:ambient_light_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5, 6, 7, 8, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.74902, 0.772549, 1, 1), Color(0.75, 0.770833, 1, 1), Color(0.986, 0.88, 1, 1), Color(1, 0.9, 0.925, 1), Color(1, 0.965333, 0.92, 1), Color(0.95, 0.979167, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WorldEnvironment:environment:ambient_light_energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.5, 8, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.05, 0.05, 0.3, 0.4]
+}
+
+[sub_resource type="Animation" id="Animation_nixbv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sun/Harness:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.253073, 1.41372, 3.14159)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sun/Harness/DirectionalLight:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sun/Harness/DirectionalLight:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WorldEnvironment:environment:ambient_light_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WorldEnvironment:environment:ambient_light_energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mftvk"]
+_data = {
+"DaylightCycle": SubResource("Animation_1et7n"),
+"RESET": SubResource("Animation_nixbv")
+}
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a4qht"]
+
+[sub_resource type="Sky" id="Sky_jc4xf"]
+sky_material = SubResource("ProceduralSkyMaterial_a4qht")
+
+[sub_resource type="Environment" id="Environment_jc8dc"]
+sky = SubResource("Sky_jc4xf")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.4
+
+[node name="Sky" type="Node3D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mftvk")
+}
+autoplay = "DaylightCycle"
+speed_scale = 0.5
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jc8dc")
+
+[node name="Surface" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -3, 20)
+size = Vector3(40, 1, 40)
+material = ExtResource("1_8ivfl")
+
+[node name="Sun" type="Node3D" parent="."]
+
+[node name="LookTarget" type="Node3D" parent="Sun"]
+
+[node name="Harness" type="Node3D" parent="Sun"]
+transform = Transform3D(-0.156432, 0.247297, 0.956228, 2.45443e-06, -0.968148, 0.25038, 0.987688, 0.0391698, 0.151448, 0, 0, 6)
+
+[node name="DirectionalLight" type="DirectionalLight3D" parent="Sun/Harness" node_paths=PackedStringArray("Target")]
+transform = Transform3D(-0.974911, 0.214609, 0.0590778, 0.0557306, -0.0216198, 0.998211, 0.215502, 0.976461, 0.00911711, -0.00559807, 99.8023, 0.00499088)
+light_energy = 0.3
+shadow_enabled = true
+script = ExtResource("1_68pgd")
+Target = NodePath("../../LookTarget")

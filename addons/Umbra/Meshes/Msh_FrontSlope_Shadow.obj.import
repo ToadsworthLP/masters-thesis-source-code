@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c6ml7ew5sv8jj"
+path="res://.godot/imported/Msh_FrontSlope_Shadow.obj-4f1bde01763cbdbdbd6dbb33606b1d4e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Msh_FrontSlope_Shadow.obj-4f1bde01763cbdbdbd6dbb33606b1d4e.mesh"]
+
+source_file="res://addons/Umbra/Meshes/Msh_FrontSlope_Shadow.obj"
+dest_files=["res://.godot/imported/Msh_FrontSlope_Shadow.obj-4f1bde01763cbdbdbd6dbb33606b1d4e.mesh", "res://.godot/imported/Msh_FrontSlope_Shadow.obj-4f1bde01763cbdbdbd6dbb33606b1d4e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

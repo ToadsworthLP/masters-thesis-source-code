@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://d2pw05gyrwv55"]
+
+[node name="Root" type="VBoxContainer"]
+offset_right = 479.0
+offset_bottom = 66.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_type_variation = &"HeaderSmall"
+text = "Umbra Settings"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+
+[node name="Properties" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="CompanionLine" type="HBoxContainer" parent="MarginContainer/Properties"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Properties/CompanionLine"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.65098, 0.654902, 0.662745, 1)
+text = "Companion"
+
+[node name="MenuButton" type="MenuButton" parent="MarginContainer/Properties/CompanionLine"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CompanionNode"
+item_count = 2
+popup/item_0/text = "Select"
+popup/item_1/text = "Unlink"
+popup/item_1/id = 1

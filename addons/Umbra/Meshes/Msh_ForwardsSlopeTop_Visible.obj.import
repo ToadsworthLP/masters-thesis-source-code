@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dqpibmipi3nbh"
+path="res://.godot/imported/Msh_ForwardsSlopeTop_Visible.obj-861e685d7d73f23fcf10df811be8ea0d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Msh_ForwardsSlopeTop_Visible.obj-861e685d7d73f23fcf10df811be8ea0d.mesh"]
+
+source_file="res://addons/Umbra/Meshes/Msh_ForwardsSlopeTop_Visible.obj"
+dest_files=["res://.godot/imported/Msh_ForwardsSlopeTop_Visible.obj-861e685d7d73f23fcf10df811be8ea0d.mesh", "res://.godot/imported/Msh_ForwardsSlopeTop_Visible.obj-861e685d7d73f23fcf10df811be8ea0d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

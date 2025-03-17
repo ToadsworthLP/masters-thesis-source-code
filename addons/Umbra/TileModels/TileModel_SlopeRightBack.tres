@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UmbraTileModel" load_steps=4 format=3 uid="uid://bo4ow8om8vp3q"]
+
+[ext_resource type="ArrayMesh" uid="uid://bsapf4ewb085b" path="res://addons/Umbra/Meshes/Msh_SideSlope_Shadow.obj" id="1_bp52i"]
+[ext_resource type="ArrayMesh" uid="uid://scxm28lf6mv8" path="res://addons/Umbra/Meshes/Msh_SideSlopeBack_Visible.obj" id="2_5h265"]
+[ext_resource type="Script" path="res://addons/Umbra/Scripts/MeshGeneration/UmbraTileModel.cs" id="3_hvk64"]
+
+[resource]
+script = ExtResource("3_hvk64")
+SourceVisibleMesh = ExtResource("2_5h265")
+SourceShadowMesh = ExtResource("1_bp52i")
+FlipH = false
+FlipV = false
+Fill = false

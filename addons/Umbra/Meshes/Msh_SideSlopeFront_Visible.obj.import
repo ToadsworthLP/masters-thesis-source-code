@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dlwf4uny00kix"
+path="res://.godot/imported/Msh_SideSlopeFront_Visible.obj-83f511fca4e9b3d485daa806d4e2375d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Msh_SideSlopeFront_Visible.obj-83f511fca4e9b3d485daa806d4e2375d.mesh"]
+
+source_file="res://addons/Umbra/Meshes/Msh_SideSlopeFront_Visible.obj"
+dest_files=["res://.godot/imported/Msh_SideSlopeFront_Visible.obj-83f511fca4e9b3d485daa806d4e2375d.mesh", "res://.godot/imported/Msh_SideSlopeFront_Visible.obj-83f511fca4e9b3d485daa806d4e2375d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,33 @@
+[gd_resource type="ArrayMesh" load_steps=15 format=4 uid="uid://cuty563j0y7ke"]
+
+[ext_resource type="Shader" path="res://addons/Umbra/Shaders/Sh_Umbra_TilemapMeshVisibleSurface.gdshader" id="1_m6agx"]
+[ext_resource type="Texture2D" uid="uid://bwglwa0k8f0j3" path="res://demo/Tilesets/Tex_Tileset_Slate_Ground_Albedo.png" id="2_pfxvu"]
+[ext_resource type="Texture2D" uid="uid://c4ikq7mawbxdl" path="res://demo/Tilesets/Tex_Tileset_Slate_GrassBasic_Albedo.png" id="3_va0r8"]
+[ext_resource type="Texture2D" uid="uid://3a4dsbhvm3jp" path="res://demo/Tilesets/Tex_Tileset_Slate_GrassDecoration_Albedo.png" id="4_pi6p0"]
+[ext_resource type="Texture2D" uid="uid://c76wpkykpt4j7" path="res://demo/Tilesets/Tex_Tileset_Slate_Castle_Albedo.png" id="5_2fr2c"]
+[ext_resource type="Texture2D" uid="uid://q5fwsybg0ac1" path="res://demo/Tilesets/Tex_Tileset_Slate_House.png" id="6_bjc3l"]
+[ext_resource type="Texture2D" uid="uid://c77hli2e3wxy4" path="res://demo/Tilesets/Tex_Tileset_Slate_Water_Albedo.png" id="7_7ovba"]
+[ext_resource type="Texture2D" uid="uid://dwolr4u2l6afc" path="res://demo/Tilesets/Tex_Tileset_Slate_Ground_Normal.png" id="8_lbwfy"]
+[ext_resource type="Texture2D" uid="uid://ctw61gn6mcs2j" path="res://demo/Tilesets/Tex_Tileset_Slate_GrassBasic_Normal.png" id="9_tccri"]
+[ext_resource type="Texture2D" uid="uid://cpwfo2v8s1r4l" path="res://demo/Tilesets/Tex_Tileset_Slate_GrassDecoration_Normal.png" id="10_37ymj"]
+[ext_resource type="Texture2D" uid="uid://c3velo75tev2t" path="res://demo/Tilesets/Tex_Tileset_Slate_Castle_Normal.png" id="11_tbfsq"]
+[ext_resource type="Texture2D" uid="uid://wusj7k0hjik2" path="res://demo/Tilesets/Tex_Tileset_Slate_House_Normal.png" id="12_3f0hd"]
+[ext_resource type="Texture2D" uid="uid://blbpwrp8onl3c" path="res://demo/Tilesets/Tex_Tileset_Slate_Water_Normal.png" id="13_nc4o3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vxpcd"]
+render_priority = 0
+shader = ExtResource("1_m6agx")
+shader_parameter/mainTexture = [ExtResource("2_pfxvu"), ExtResource("3_va0r8"), ExtResource("4_pi6p0"), ExtResource("5_2fr2c"), ExtResource("6_bjc3l"), ExtResource("7_7ovba")]
+shader_parameter/normalMapTexture = [ExtResource("8_lbwfy"), ExtResource("9_tccri"), ExtResource("10_37ymj"), ExtResource("11_tbfsq"), ExtResource("12_3f0hd"), ExtResource("13_nc4o3")]
+
+[resource]
+_surfaces = [{
+"aabb": AABB(0, 0, 1, 1, 1, 1e-05),
+"attribute_data": PackedByteArray("/////83MDD8AAAA/AACAQP/////NzAw/AADAPgAAgED/////mpkZPwAAAD8AAIBA/////83MDD8AAMA+AACAQP////+amRk/AADAPgAAgED/////mpkZPwAAAD8AAIBA"),
+"format": 34359771231,
+"material": SubResource("ShaderMaterial_vxpcd"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AACAPwAAAAAAAIA/AAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AACAPwAAAAAAAIA//3//f////7//f/9/////v/9//3////+//3//f////7//f/9/////v/9//3////+/")
+}]

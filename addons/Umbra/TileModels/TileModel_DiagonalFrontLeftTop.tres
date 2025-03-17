@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UmbraTileModel" load_steps=4 format=3 uid="uid://d1jvl2a0m85mw"]
+
+[ext_resource type="ArrayMesh" uid="uid://j7mtcyxy3h34" path="res://addons/Umbra/Meshes/Msh_Diagonal_Shadow.obj" id="1_fal8x"]
+[ext_resource type="ArrayMesh" uid="uid://co6gpneedia2n" path="res://addons/Umbra/Meshes/Msh_DiagonalTop_Visible.obj" id="2_iox2m"]
+[ext_resource type="Script" path="res://addons/Umbra/Scripts/MeshGeneration/UmbraTileModel.cs" id="3_u4duw"]
+
+[resource]
+script = ExtResource("3_u4duw")
+SourceVisibleMesh = ExtResource("2_iox2m")
+SourceShadowMesh = ExtResource("1_fal8x")
+FlipH = true
+FlipV = false
+Test = true
